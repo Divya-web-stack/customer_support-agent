@@ -1,0 +1,66 @@
+{
+  "business_name": "Bloom Aesthetics Clinic",
+  "business_type": "Cosmetic & Skin Care Clinic",
+
+  "hours": {
+    "monday_to_saturday": "9:00 AM - 7:00 PM",
+    "sunday": "Closed"
+  },
+
+  "services": [
+    {
+      "name": "Botox",
+      "price": "from £200",
+      "description": "Anti-wrinkle cosmetic treatment"
+    },
+    {
+      "name": "Fillers",
+      "price": "from £250",
+      "description": "Dermal filler treatment"
+    },
+    {
+      "name": "Consultation",
+      "price": "Free",
+      "description": "Initial consultation with specialist"
+    }
+  ],
+
+  "booking_policy": {
+    "booking_methods": [
+      "WhatsApp",
+      "Website"
+    ],
+    "cancellation_policy": "24 hour notice required"
+  },
+
+  "escalation_rules": [
+    "customer complaint",
+    "medical question",
+    "pricing negotiation",
+    "more than 2 unanswered questions",
+    "explicit request for human agent",
+    "angry or frustrated sentiment"
+  ],
+
+  "unsupported_topics": [
+    "medical diagnosis",
+    "insurance claims",
+    "prescription advice",
+    "treatment guarantees"
+  ],
+
+  "faq_examples": [
+    {
+      "question": "What are your Botox prices?",
+      "answer": "Botox treatments start from £200."
+    },
+    {
+      "question": "Do you offer consultations?",
+      "answer": "Yes, consultations are free."
+    },
+    {
+      "question": "How can I book?",
+      "answer": "Bookings can be made via WhatsApp or the clinic website."
+    }
+  ]
+}
