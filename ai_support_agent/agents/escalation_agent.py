@@ -52,8 +52,8 @@ class EscalationAgent:
                 "escalate": True,
                 "reason": "Explicit request for human",
                 "message": (
-                    "I understand your frustration, and I’m sorry for the inconvenience. "
-                    "I will connect you with a human representative for further assistance."
+                    "Of course! I'll connect you with one of our team members right away. "
+                    "They'll be happy to help you with your inquiry."
                 )
             }
 

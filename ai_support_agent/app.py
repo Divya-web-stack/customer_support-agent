@@ -50,10 +50,7 @@ def main():
         # If escalation triggered, print escalation message
         if escalation['escalate']:
             console.print(f"[bold magenta]AI:[/bold magenta] {escalation['message']}")
-            console.print(f"[bold red]Escalation:[/bold red] {escalation['reason']}")
-
             logger.log(f"AI: {escalation['message']}")
-            logger.log(f"Escalation: {escalation['reason']}")
 
             memory.escalation_reason = escalation['reason']
 
@@ -63,6 +60,14 @@ def main():
                 "Out of SOP scope"
             ]:
                 memory.sop_gaps.append(user_input)
+
+            # Ask qualification questions before escalating
+            console.print("\n[bold yellow]Before connecting you, I'd like to gather a few details to help our team assist you better.[/bold yellow]", style="bold yellow")
+            logger.log("Qualification stage started before escalation")
+            qualification_agent.ask_questions(console, logger)
+
+            console.print(f"[bold red]Escalation:[/bold red] {escalation['reason']}")
+            logger.log(f"Escalation: {escalation['reason']}")
 
             break
 
